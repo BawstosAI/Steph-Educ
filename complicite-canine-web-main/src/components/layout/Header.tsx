@@ -27,7 +27,7 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-2 sm:space-x-3">
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center p-1 shadow-sm">
                               <img 
-                  src="/lovable-uploads/logo-heart-paw2.png" 
+                  src={`${import.meta.env.BASE_URL}lovable-uploads/logo-heart-paw2.png`} 
                   alt="Logo Complicité Canine - Cœur avec patte"
                   className="w-full h-full object-contain"
                 />

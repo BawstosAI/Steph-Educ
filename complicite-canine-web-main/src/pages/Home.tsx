@@ -54,7 +54,7 @@ const Home = () => {
             <div className="relative order-1 lg:order-2">
               <div className="aspect-square rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/lovable-uploads/69e3fd4b-84cc-4b04-9d69-479f21bb416f.png" 
+                  src={`${import.meta.env.BASE_URL}lovable-uploads/69e3fd4b-84cc-4b04-9d69-479f21bb416f.png`} 
                   alt="Stéphanie Englebert et Roxy, son Berger Australien, dans un environnement naturel enneigé"
                   className="w-full h-full object-cover"
                 />
