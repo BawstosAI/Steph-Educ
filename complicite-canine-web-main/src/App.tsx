@@ -20,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.PROD ? '/Steph-Educ' : ''}>
         <div className="min-h-screen flex flex-col bg-background">
           <Header />
           <main className="flex-1">
