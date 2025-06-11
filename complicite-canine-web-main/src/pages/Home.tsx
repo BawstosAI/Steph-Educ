@@ -121,7 +121,7 @@ const Home = () => {
               Mes interventions
             </h2>
             <p className="text-base sm:text-lg text-sage-600">
-              Basée à Louveciennes, terrain à Mareil-Marly
+              Louveciennes et les villes environnantes : Bougival, la Celle-Saint-Cloud, Le Chesnay, le Port-Marly, Marly le Roi, Versailles, Croissy, Chatou
             </p>
           </div>
 

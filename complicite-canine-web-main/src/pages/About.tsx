@@ -49,16 +49,13 @@ const About = () => {
             
             <div className="order-1 lg:order-2">
               <div className="relative">
-                <div className="aspect-square rounded-3xl overflow-hidden shadow-xl">
-                  <img 
-                    src={`${import.meta.env.BASE_URL}lovable-uploads/sunset.jpg`}
-                    alt="Stéphanie Englebert et Roxy au coucher du soleil"
-                    className="w-full h-full object-cover"
-                  />
+                <div className="aspect-square bg-gradient-to-br from-sage-200 to-warm-200 rounded-3xl flex items-center justify-center">
+                  <div className="text-center text-sage-700">
+                    <div className="text-8xl mb-4">👩‍🦰</div>
+                    <p className="text-xl font-medium">Stéphanie</p>
+                    <p className="text-sm opacity-75">Éducatrice Canine</p>
+                  </div>
                 </div>
-                <p className="text-sm text-sage-600 text-center mt-3 italic">
-                  Stéphanie et Roxy profitant d'un moment de complicité
-                </p>
               </div>
             </div>
           </div>

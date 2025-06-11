@@ -215,103 +215,130 @@ const Contact = () => {
       {/* Map Section */}
       <section className="py-16 bg-sage-50">
         <div className="container-width section-padding">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-sage-800 text-center mb-8">
               Zone d'intervention
             </h2>
             
-            <Card className="p-8 text-center border-sage-200">
-              <div className="text-6xl mb-6">🗺️</div>
-              <h3 className="text-xl font-semibold text-sage-800 mb-4">
-                Zone d'intervention élargie
-              </h3>
-              <p className="text-sage-600 mb-6 leading-relaxed">
-                J'interviens à Louveciennes et dans les villes environnantes : Bougival, la Celle-Saint-Cloud, Le Chesnay, le Port-Marly, Marly le Roi, Versailles, Croissy, Chatou. 
-                Terrain d'entraînement à Mareil-Marly pour des séances 
-                à domicile ou en extérieur.
-              </p>
-              <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg border border-sage-200 relative">
-                {/* Carte interactive personnalisée */}
-                <div className="w-full h-full bg-gradient-to-br from-sage-50 to-warm-50 relative">
-                  {/* Titre et description */}
-                  <div className="absolute top-4 left-4 right-4 z-10">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg border border-sage-200">
-                      <h4 className="text-lg font-semibold text-sage-800 mb-2">Zone d'intervention interactive</h4>
-                      <p className="text-sm text-sage-600 mb-3">
-                        Cliquez sur une ville pour plus d'informations
-                      </p>
-                      
-                      {/* Grille des villes interactives */}
-                      <div className="grid grid-cols-3 gap-2">
-                        {[
-                          { name: "Louveciennes", desc: "Base principale", color: "bg-sage-700" },
-                          { name: "Bougival", desc: "Domicile", color: "bg-sage-600" },
-                          { name: "La Celle-Saint-Cloud", desc: "Socialisation", color: "bg-sage-600" },
-                          { name: "Le Chesnay", desc: "Rééducation", color: "bg-sage-600" },
-                          { name: "Le Port-Marly", desc: "Éducation", color: "bg-sage-600" },
-                          { name: "Marly-le-Roi", desc: "Terrain", color: "bg-sage-500" },
-                          { name: "Versailles", desc: "Parcs", color: "bg-sage-600" },
-                          { name: "Croissy", desc: "Balades", color: "bg-sage-600" },
-                          { name: "Chatou", desc: "Séances", color: "bg-sage-600" }
-                        ].map((city, index) => (
-                          <div 
-                            key={index}
-                            className={`${city.color} text-white text-xs p-2 rounded-lg cursor-pointer hover:opacity-80 transition-opacity text-center group relative`}
-                            title={`${city.name} - ${city.desc}`}
-                          >
-                            <div className="font-medium">{city.name}</div>
-                            <div className="text-xs opacity-90">{city.desc}</div>
-                            
-                            {/* Tooltip au survol */}
-                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block z-20">
-                              <div className="bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap">
-                                📞 06 75 05 45 64
-                                <div className="w-2 h-2 bg-gray-800 transform rotate-45 absolute top-full left-1/2 -translate-x-1/2 -mt-1"></div>
-                              </div>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Informations principales */}
+              <Card className="p-8 border-sage-200 h-fit">
+                <div className="text-center mb-6">
+                  <div className="text-5xl mb-4">📍</div>
+                  <h3 className="text-2xl font-semibold text-sage-800 mb-4">
+                    Où j'interviens
+                  </h3>
+                  <p className="text-lg text-sage-600 leading-relaxed">
+                    <strong>Louveciennes</strong> et les villes environnantes
+                  </p>
+                </div>
 
-                  {/* Fond décoratif avec forme de zone */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-48 h-32 border-2 border-sage-400 border-dashed rounded-3xl opacity-30 transform rotate-12"></div>
-                    <div className="absolute w-32 h-20 border-2 border-sage-500 border-dashed rounded-2xl opacity-20 transform -rotate-6"></div>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-3 bg-sage-100 rounded-lg">
+                    <span className="font-medium text-sage-800">🏠 Base principale</span>
+                    <span className="text-sage-600">Louveciennes</span>
                   </div>
-
-                  {/* Légende en bas */}
-                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-sage-200">
-                    <h5 className="text-xs font-semibold text-sage-800 mb-2">🗺️ Zone complète</h5>
-                    <div className="flex items-center gap-2 text-xs text-sage-600 mb-1">
-                      <div className="w-3 h-3 bg-sage-700 rounded-full"></div>
-                      <span>Base Louveciennes</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-sage-600 mb-1">
-                      <div className="w-3 h-3 bg-sage-600 rounded-full"></div>
-                      <span>Villes couvertes</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-sage-600">
-                      <div className="w-3 h-3 bg-sage-500 rounded-full"></div>
-                      <span>Terrain Mareil-Marly</span>
-                    </div>
+                  <div className="flex items-center justify-between p-3 bg-sage-50 rounded-lg">
+                    <span className="font-medium text-sage-800">🌳 Terrain d'entraînement</span>
+                    <span className="text-sage-600">Mareil-Marly</span>
                   </div>
-
-                  {/* Lien vers Google Maps */}
-                  <div className="absolute bottom-4 right-4">
-                    <a
-                      href="https://www.google.com/maps/search/Louveciennes+Bougival+Celle-Saint-Cloud+Chesnay+Port-Marly+Marly-le-Roi+Versailles+Croissy+Chatou"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-sage-600 hover:bg-sage-700 text-white text-xs px-3 py-2 rounded-lg shadow-lg transition-colors flex items-center gap-1"
-                    >
-                      🗺️ Google Maps
-                    </a>
+                  <div className="flex items-center justify-between p-3 bg-sage-50 rounded-lg">
+                    <span className="font-medium text-sage-800">📱 Contact rapide</span>
+                    <span className="text-sage-600">06 75 05 45 64</span>
                   </div>
                 </div>
-              </div>
-            </Card>
+
+                <div className="mt-6 pt-6 border-t border-sage-200">
+                  <Button 
+                    asChild 
+                    className="w-full bg-sage-600 hover:bg-sage-700"
+                  >
+                    <a
+                      href="https://maps.app.goo.gl/qHsD5Xnt5Rc9DrYf7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      🗺️ Voir sur Google Maps
+                    </a>
+                  </Button>
+                </div>
+              </Card>
+
+              {/* Liste des villes */}
+              <Card className="p-8 border-sage-200">
+                <h4 className="text-xl font-semibold text-sage-800 mb-6">
+                  Villes couvertes
+                </h4>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {[
+                    { name: "Louveciennes", status: "Base", icon: "🏠" },
+                    { name: "Bougival", status: "Disponible", icon: "✅" },
+                    { name: "La Celle-Saint-Cloud", status: "Disponible", icon: "✅" },
+                    { name: "Le Chesnay", status: "Disponible", icon: "✅" },
+                    { name: "Le Port-Marly", status: "Disponible", icon: "✅" },
+                    { name: "Marly-le-Roi", status: "Disponible", icon: "✅" },
+                    { name: "Versailles", status: "Disponible", icon: "✅" },
+                    { name: "Croissy", status: "Disponible", icon: "✅" },
+                    { name: "Chatou", status: "Disponible", icon: "✅" },
+                    { name: "Mareil-Marly", status: "Terrain", icon: "🌳" }
+                  ].map((city, index) => (
+                    <div 
+                      key={index}
+                      className="flex items-center justify-between p-3 bg-white rounded-lg border border-sage-100 hover:border-sage-300 hover:shadow-sm transition-all duration-200"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="text-lg">{city.icon}</span>
+                        <span className="font-medium text-sage-800">{city.name}</span>
+                      </div>
+                      <span className={`text-xs px-2 py-1 rounded-full ${
+                        city.status === "Base" 
+                          ? "bg-sage-700 text-white" 
+                          : city.status === "Terrain"
+                          ? "bg-green-100 text-green-700"
+                          : "bg-sage-100 text-sage-700"
+                      }`}>
+                        {city.status}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-6 p-4 bg-sage-50 rounded-lg border border-sage-200">
+                  <h5 className="font-semibold text-sage-800 mb-2 flex items-center gap-2">
+                    <span>ℹ️</span>
+                    Types d'intervention
+                  </h5>
+                  <ul className="text-sm text-sage-600 space-y-1">
+                    <li>• <strong>À domicile :</strong> Éducation dans votre environnement</li>
+                    <li>• <strong>En extérieur :</strong> Socialisation et exercices pratiques</li>
+                    <li>• <strong>Terrain privé :</strong> Séances spécialisées à Mareil-Marly</li>
+                  </ul>
+                </div>
+              </Card>
+            </div>
+
+            {/* Section d'appel à l'action */}
+            <div className="mt-8 text-center">
+              <Card className="p-6 bg-gradient-to-r from-sage-600 to-sage-700 text-white border-0">
+                <h4 className="text-xl font-semibold mb-3">
+                  Votre ville n'est pas dans la liste ?
+                </h4>
+                <p className="mb-4 text-sage-100">
+                  N'hésitez pas à me contacter ! Je peux étudier votre demande 
+                  selon la distance et vos besoins spécifiques.
+                </p>
+                <Button 
+                  asChild 
+                  variant="secondary"
+                  className="bg-white text-sage-600 hover:bg-sage-50"
+                >
+                  <a href="https://wa.me/33675054564" target="_blank" rel="noopener noreferrer">
+                    💬 Me contacter sur WhatsApp
+                  </a>
+                </Button>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
