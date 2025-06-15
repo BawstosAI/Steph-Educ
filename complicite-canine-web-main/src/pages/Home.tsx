@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -22,9 +21,7 @@ const Home = () => {
               </div>
               
               <p className="text-base sm:text-lg text-sage-600 leading-relaxed text-center lg:text-left">
-                Découvrez l'éducation canine 100% positive avec Stéphanie Englebert. 
-                Une méthode respectueuse, sans punition ni coercition, pour créer une 
-                relation harmonieuse avec votre compagnon.
+              Je suis Stéphanie Englebert, éducatrice canine en méthode 100 % positive. Une approche bienveillante, sans punition ni contrainte, pour construire une relation de confiance avec votre chien.
               </p>
 
               <div className="flex flex-col gap-4">
@@ -120,9 +117,40 @@ const Home = () => {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-sage-800 mb-4 lg:mb-6">
               Mes interventions
             </h2>
-            <p className="text-base sm:text-lg text-sage-600">
-              Louveciennes et les villes environnantes : Bougival, la Celle-Saint-Cloud, Le Chesnay, le Port-Marly, Marly le Roi, Versailles, Croissy, Chatou
-            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="bg-white/50 p-6 rounded-lg shadow-sm">
+                <p className="text-base sm:text-lg text-sage-600">
+                  <span className="font-bold text-sage-800">Yvelines</span> : Louveciennes et ses environs
+                  <br />
+                  <span className="text-sm">
+                    Bougival, la Celle-Saint-Cloud, Le Chesnay, le Port-Marly, Marly le Roi, Versailles, Croissy, Chatou
+                  </span>
+                </p>
+              </div>
+              <div className="bg-white/50 p-6 rounded-lg shadow-sm">
+                <p className="text-base sm:text-lg text-sage-600">
+                  <span className="font-bold text-sage-800">Var</span> : Cavalaire-sur-Mer et ses environs
+                  <br />
+                  <span className="text-sm">
+                    Le Lavandou, La Môle, Bormes-les-Mimosas, Cavalière, Rayol-Canadel-Sur-Mer
+                  </span>
+                </p>
+              </div>
+              <div className="bg-sage-50/80 p-8 rounded-xl shadow-md md:col-span-2 border border-sage-200">
+                <p className="text-base sm:text-lg text-sage-700 text-center">
+                  <span className="italic">Votre ville n'est pas dans la liste ? N'hésitez pas à </span>
+                  <a 
+                    href="https://wa.me/33675054564" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="underline italic"
+                  >
+                    me contacter
+                  </a>
+                  <span className="italic"> pour savoir si je peux m'y rendre !</span>
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
