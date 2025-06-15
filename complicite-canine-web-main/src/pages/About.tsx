@@ -49,12 +49,15 @@ const About = () => {
             
             <div className="order-1 lg:order-2">
               <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-sage-200 to-warm-200 rounded-3xl flex items-center justify-center">
-                  <div className="text-center text-sage-700">
-                    <div className="text-8xl mb-4">👩‍🦰</div>
-                    <p className="text-xl font-medium">Stéphanie</p>
-                    <p className="text-sm opacity-75">Éducatrice Canine</p>
-                  </div>
+                <div className="aspect-square rounded-3xl overflow-hidden shadow-lg">
+                  <img 
+                    src={`${import.meta.env.BASE_URL}lovable-uploads/sunset.jpg`} 
+                    alt="Stéphanie Englebert, éducatrice canine comportementaliste, avec son chien Roxy"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-2 -right-2 bg-white rounded-full p-3 shadow-lg">
+                  <div className="text-2xl">🐕</div>
                 </div>
               </div>
             </div>
